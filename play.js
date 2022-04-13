@@ -1,27 +1,22 @@
 const { connect } = require('./client.js')
 
-// const net = require("net");
+const handleUserInput = (key) => {
+  if (key === '\u0003') {
+    process.exit();
+  }
+}
 
-// const credentials = {
-//   host: 'localhost', //IP address
-//   port: 50541// PORT number
-// }
+const setupInput = function () {
+  const stdin = process.stdin;
+  stdin.setRawMode(true);
+  stdin.setEncoding("utf8");
+  stdin.resume();
 
-// const connect = function() {
-//   const conn = net.createConnection(credentials);
-
-//   conn.setEncoding("utf8");
-
-//   conn.on("data", (data) => {
-//     console.log(data);
-//   });
-
-
-//   return conn;
-
-// };
+  stdin.on("data", handleUserInput) ;
+  return stdin;
+};
 
 
-// console.log("Connecting...");
-// connect();
 
+
+setupInput();
