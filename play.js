@@ -1,25 +1,27 @@
-const net = require("net");
+const { connect } = require('./client.js')
 
-const credentials = {
-  host: 'localhost', //IP address
-  port: 50541// PORT number
-}
+// const net = require("net");
 
-const connect = function() {
-  const conn = net.createConnection(credentials);
+// const credentials = {
+//   host: 'localhost', //IP address
+//   port: 50541// PORT number
+// }
 
-  conn.setEncoding("utf8");
+// const connect = function() {
+//   const conn = net.createConnection(credentials);
 
-  conn.on("data", (data) => {
-    console.log(data);
-  });
+//   conn.setEncoding("utf8");
 
-
-  return conn;
-
-};
+//   conn.on("data", (data) => {
+//     console.log(data);
+//   });
 
 
-console.log("Connecting...");
-connect();
+//   return conn;
+
+// };
+
+
+// console.log("Connecting...");
+// connect();
 
