@@ -32,6 +32,16 @@ const handleUserInput = (key) => {
     connection.write('Move: right')
   }
 
+  if (key === 'q') {;
+    // console.log('AAAAAAAAAAAAAAA');
+    connection.write('Say: AAAAAAAAAAAAAAA')
+  }
+
+  if (key === 'l') {;
+    // console.log('lol');
+    connection.write('Say: lol')
+  }
+
 }
 
 
@@ -42,7 +52,10 @@ const setupInput = function (conn) {
   stdin.setEncoding("utf8");
   stdin.resume();
   stdin.on("data", handleUserInput) ;
+
   return stdin;
+
+
 };
 
 
