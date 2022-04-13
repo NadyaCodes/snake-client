@@ -1,12 +1,7 @@
-// const { connect } = require("http2");
-// const net = require("net");
-
-
-
 let connection;
 
 const handleUserInput = (key) => {
-  console.log("key: ", key)
+  // console.log("key: ", key)
 
   if (key === '\u0003') {
     process.exit();
@@ -58,10 +53,5 @@ const setupInput = function (conn) {
 
 };
 
-
-
-// if (key === 'w') {
-//   conn.write('Move: up');
-// }
 
 module.exports = { setupInput }

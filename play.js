@@ -1,10 +1,3 @@
-const net = require("net");
-
-// establishes a connection with the game server
-// let conn;
-
-
-
 const { setupInput } = require('./input.js')
 
 
